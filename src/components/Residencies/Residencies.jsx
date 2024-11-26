@@ -5,6 +5,17 @@ import "swiper/css"
 import data from '../../utils/slider.json'
 import { sliderSettings } from '../../utils/common'
 
+
+const SliderButton = () => {
+  const swiper = useSwiper()
+  return (
+    <div className="flexCenter r-button">
+      <button onClick={() => swiper.slidePrev()}>&lt;</button>
+      <button onClick={() => swiper.slideNext()}>&gt;</button>
+    </div>
+  )
+}
+
 const Residencies = () => {
   return (
     <section className="r-wrapper">
@@ -15,13 +26,14 @@ const Residencies = () => {
         </div>
 
         <Swiper {...sliderSettings}>
+          <SliderButton/>
           {
             data.map((card, i) => (
               <SwiperSlide key={i}>
                 <div className="r-card flexColStart">
                   <img src={card.image} alt="home" />
                   <span className="r-price secondaryText">
-                    <span style={{color:"orange"}}>$</span>
+                    <span style={{ color: "orange" }}>$</span>
                     <span>{card.price}</span>
                   </span>
 
@@ -43,12 +55,3 @@ const Residencies = () => {
 export default Residencies
 
 
-const sliderButtons = ()=>{
-  const swiper = useSwiper()
-return(
-  <div className="r-button">
-    <button>&lt;</button>
-    <button>&gt;</button>
-  </div>
-)
-}
