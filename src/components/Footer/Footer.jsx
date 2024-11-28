@@ -6,7 +6,7 @@ const Footer = () => {
     <section className="f-wrapper">
       <div className='paddings innerWidth flexCenter f-container'>
         <div className="flexColStart f-left">
-          <img src="./logo.png" alt="" width={100} />
+          <img src="./logo.png" alt="" width={120} />
 
           <span className="secondaryText">
             Our vision is to make all people <br />

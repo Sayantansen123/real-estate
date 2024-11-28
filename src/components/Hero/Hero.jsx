@@ -1,22 +1,26 @@
 import React from 'react'
-import "./Hero.css"
 import { HiLocationMarker } from 'react-icons/hi'
 import CountUp from 'react-countup'
+import "./Hero.css"
+import {motion, spring} from "framer-motion"
 
 const Hero = () => {
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper" >
         <div className="paddings innerWidth hero-container flexCenter">
             <div className="flexColStart hero-left">
                 <div className="hero-title">
                     <div className="orange-circle"/>
-
-                    
-                    <h1>
+                    <motion.h1
+                    initial={{y:"2rem",opacity: 0}}
+                    animate={{y: 0 ,opacity:1}}
+                    transition={{duration:2,
+                        type:"spring"
+                    }}>
                     Find <br/>
                     Your Perfect Place <br/>
                     To Call Home
-                    </h1>
+                    </motion.h1>
                 </div>
 
                 <div className="flexColStart hero-des">
@@ -40,7 +44,7 @@ const Hero = () => {
                         <span className='secondaryText'>Premium Products</span>
                     </div>
 
-                    <div className="flexColStart stat">
+                    <div className="flexColCenter stat">
                         <span>
                             <CountUp start={1950} end={2000} duration={5}/>
                             <span>+</span>
@@ -48,21 +52,27 @@ const Hero = () => {
                         <span className='secondaryText'>Happy Customers</span>
                     </div>
 
-                    <div className="flexColStart stat">
+                    <div className="flexColCenter stat">
                         <span>
                             <CountUp end={28} />
                             <span>+</span>
                         </span>
-                        <span className='secondaryText'>Awards </span>
+                        <span className='secondaryText'>Awards Winnings</span>
                     </div>
                 </div>
 
             </div>
 
             <div className="flexCenter hero-right">
-                <div className="image-container">
+                <motion.div 
+                initial={{x:"7rem",opacity:0}}
+                animate={{x:0,opacity: 1}}
+                transition={{duration:2,
+                    type:spring,
+                }}
+                className="image-container">
                 <img src="./hero-image.jpg" alt="" />
-                </div>
+                </motion.div>
                 
             </div>
         </div>

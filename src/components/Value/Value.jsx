@@ -7,7 +7,7 @@ import "react-accessible-accordion/dist/fancy-example.css"
 
 const Value = () => {
     return (
-        <section className="v-wrapper">
+        <section className="v-wrapper" id='value'>
             <div className="paddings innerWidth flexCenter v-container">
                 {/*left side*/}
                 <div className="v-left">

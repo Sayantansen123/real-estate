@@ -13,19 +13,19 @@ function App() {
 
   return (
     <>
-     <div className="App">
-      <div>
-        <div className="white-gradient"></div>
-       <Header/>
-       <Hero/>
+      <div className="App">
+        <div>
+          <div className="white-gradient"/>
+          <Header />
+          <Hero />
+        </div>
+        <Companies />
+        <Residencies />
+        <Value />
+        <Contact />
+        <GetStarted />
+        <Footer />
       </div>
-      <Companies/>
-      <Residencies/>
-      <Value/>
-      <Contact/>
-      <GetStarted/>
-      <Footer/>
-     </div>
     </>
   )
 }

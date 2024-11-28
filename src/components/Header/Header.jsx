@@ -18,12 +18,12 @@ const Header = () => {
 
         <OutsideClickHandler onOutsideClick={() => setMenuOpen(false)}>
           <div className="flexCenter h-menu " style={getMenuSTyle(menuOpen)}>
-            <a href="">Residencies</a>
-            <a href="">Our Value</a>
-            <a href="">Contact Us</a>
-            <a href="">Get Started</a>
+            <a href="#resedencies">Residencies</a>
+            <a href="#value">Our Value</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#get">Get Started</a>
             <button className='button'>
-              <a href="">Contact</a>
+              <a href="mailto:example123@gmail.com">Contact</a>
             </button>
           </div>
           <div className="menu-icon" onClick={() => { setMenuOpen((prev) => !prev) }}>
