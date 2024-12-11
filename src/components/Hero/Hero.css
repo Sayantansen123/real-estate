@@ -13,7 +13,7 @@
 
 .image-container{
     width: 30rem;
-    height: 35rem;
+    height: 29rem;
     overflow: hidden;
     border-radius: 15rem 15rem 0 0;
     border: 8px solid black;
@@ -97,7 +97,7 @@
 
     .image-container{
         width: 95%;
-        height: 25rem;
+        height: 20rem;
     }
 
     .stats{
